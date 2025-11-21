@@ -12,25 +12,31 @@
 ```bash
 git clone <your-forked-repo-url>
 ```
-### 3. 安装依赖
+
+### 3. 配置上游仓库
+将本仓库设置为上游仓库：
+```bash
+git remote add upstream https://github.com/seronna/bytedance-canva
+```
+### 4. 安装依赖
 进入项目目录后，运行以下命令安装依赖：
 ```bash
 pnpm install
 ```
 
-### 4. 启动开发服务器
+### 5. 启动开发服务器
 运行以下命令启动开发服务器：
 ```bash
 pnpm dev
 ```
 
-### 5. 构建生产环境
+### 6. 构建生产环境
 运行以下命令构建生产环境：
 ```bash
 pnpm build
 ```
 
-### 6. 预览生产环境
+### 7. 预览生产环境
 运行以下命令预览生产环境：
 ```bash
 pnpm preview
@@ -83,3 +89,16 @@ git push origin feat/your-feature-name
 
 6. 合并 PR
 PR 通过审核后，维护者会将代码合并到主分支。
+
+## 获取上游仓库的最新更改
+```bash
+git fetch upstream
+```
+切换到主分支：
+```bash
+git checkout main
+```
+合并上游仓库的最新更改：
+```bash
+git merge upstream/main
+```
